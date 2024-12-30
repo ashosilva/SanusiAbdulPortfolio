@@ -13,7 +13,7 @@ export default function Navbar() {
                         to="/" exact
                         activeClassName="text-green-100"
                         className="inflex-flex items-center py-8 px-3 mr-4 rounded text-green-100 hover:text-green-800 text-4xl fon-bold cursive tracking-widest"
-                    >ABAYOMI</NavLink>
+                    >ABDUL</NavLink>
 
                     {/* <NavLink
                         to="/post"

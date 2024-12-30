@@ -8,7 +8,7 @@ export default function Home() {
             <img src={bgHome} alt="Backgound Image" className="absolute object-cover w-full h-full"/>
             <section className="relative flex justify-center min-h-screen pt-12 lg:pt-40 px-8">
                 <h1 className="text-6xl text-gray-400 font-bold cursive home-name mb-60 ">
-                    Hello. I'm Abayomi and welcome.
+                    Hello. I'm Abdul and welcome.
                      
                     <div className="flex items-center justify-center py-3 px- my-10" >
                     <SocialIcon
