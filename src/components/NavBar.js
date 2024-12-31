@@ -6,12 +6,12 @@ import { SocialIcon } from "react-social-icons"
 
 export default function Navbar() {
     return (
-        <header className="bg-green-600">
+        <header className="bg-blue-600">
             <div className="container mx-auto flex justify-between cursive">
                 <nav className="flex">
                     <NavLink
                         to="/" exact
-                        activeClassName="text-green-100"
+                        activeClassName="text-blue-100"
                         className="inflex-flex items-center py-8 px-3 mr-4 rounded text-green-100 hover:text-green-800 text-4xl fon-bold cursive tracking-widest"
                     >ABDUL</NavLink>
 
@@ -23,7 +23,7 @@ export default function Navbar() {
 
                     <NavLink
                         to="/project"
-                        activeClassName="text-purple-100 bg-green-700"
+                        activeClassName="text-red-500 bg-red-700"
                         className="inline-flex items-center py-3 px-3 my-6 rounded text-purple-150 hover:text-green-300"
                     >PROJECTS</NavLink>
 
