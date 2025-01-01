@@ -11,7 +11,7 @@ function urlFor(source) {
     return builder.image(source)
 }
 
-export default function Home() {
+export default function Inquiry() {
 
     const [home, setHome] = useState(null)
 
