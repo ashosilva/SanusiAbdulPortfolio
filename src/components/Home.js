@@ -32,26 +32,44 @@ export default function Home() {
 
     return (
         <main className="bg-black min-h-screen">
+            <div className="p-20 lg:pt-36">
 
-            <div className="p-10 lg:pt-36 container mx-auto">
-                <img
-                    src={urlFor(home.homeImage).url()}
-                    alt={home.name}
-                    className="rounded w-32 h-32 lg:w-64 lg:h-64 mr-8"
-                />
-                        
-                <div class="overflow-visible"></div>
-                        
-                <div className="text-lg flex flex-col justify-center">
-                    <h1 className=" bold text-5xl text-green-300 mb-4">
-                        <span className="text-green-100">{home.name}</span>
-                    </h1>
-                    <div className="prose lg:prose-xl text-white">
-                        <BlockContent
-                            blocks={home.bio}
-                            projectId="hxac9fk1"
-                            dataset="production"
-                        />
+                <div className="grid grid-cols-3 justify-items-center pt-5">
+                
+                    <img
+                        src={urlFor(home.homeImage).url()}
+                        alt={home.name}
+                        className="w-full h-full border-double border-2 col-span-2"
+                    />
+                    <div className="place-self-center">
+                        <h1 className=" bold text-5xl text-green-300">
+                            <span className="text-white">Feratured Style</span>
+                        </h1>
+                    </div>
+
+                </div>
+                <div className="p-5"></div>
+
+                <div className="max-w-md mx-auto rounded-xl shadow-md overflow-hidden md:max-w-2xl">
+                    <div className="md:flex">
+                        <div className="md:shrink-0">
+                            <img 
+                                className="h-48 w-48 object-cover md:h-full md:w-48 lg:w-64 lg:h-64 rounded-full" 
+                                src={urlFor(home.personalImage).url()} 
+                                alt={home.career}
+                            />
+                        </div>
+                        <div className="px-5 py-3">
+                            <h1 className="uppercase tracking-wide text-lg text-white font-extralight">{home.name}</h1>
+                            <h3 className="block text-md leading-tight font-thin text-white ">{home.career}</h3>
+                            <p className="mt-2 text-white text-sm font-normal">
+                                <BlockContent
+                                    blocks={home.bio}
+                                    projectId="hxac9fk1"
+                                    dataset="production"
+                                />
+                            </p>
+                        </div>
                     </div>
                 </div>
 
