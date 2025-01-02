@@ -32,9 +32,9 @@ export default function Home() {
 
     return (
         <main className="bg-black min-h-screen">
-            <div className="p-20 lg:pt-36">
+            <div className="p-20">
 
-                <div className="grid grid-cols-3 justify-items-center pt-5">
+                <div className="grid grid-cols-3 justify-items-center pt-20">
                 
                     <img
                         src={urlFor(home.homeImage).url()}
@@ -42,7 +42,7 @@ export default function Home() {
                         className="w-full h-full border-double border-2 col-span-2"
                     />
                     <div className="place-self-center">
-                        <h1 className=" bold text-5xl text-green-300">
+                        <h1 className=" bold text-3xl lg:text-4xl text-green-300">
                             <span className="text-white">Feratured Style</span>
                         </h1>
                     </div>
@@ -54,7 +54,7 @@ export default function Home() {
                     <div className="md:flex">
                         <div className="md:shrink-0">
                             <img 
-                                className="h-48 w-48 object-cover md:h-full md:w-48 lg:w-64 lg:h-64 rounded-full" 
+                                className="object-cover h-48 w-48 lg:w-64 lg:h-64 rounded-full" 
                                 src={urlFor(home.personalImage).url()} 
                                 alt={home.career}
                             />
