@@ -16,44 +16,45 @@ export default function Navbar() {
     return (
         <header className="navbar border-sky-500 fixed top-0 left-0 right-0 py-2">
 
-            <div className="container mx-auto cursive pt-12">
+            <div className="container mx-auto pt-12">
                 <div className="flex justify-center">
                     <NavLink
                         to="/"
-                        className="text-white hover:text-gray-300 text-8xl font-bold cursive tracking-widest"
+                        className="text-white hover:text-gray-300 text-8xl cursive tracking-widest"
                     >RadiiSolis</NavLink>
 
                 </div>
 
                 <div className="py-3 rounded"></div>
 
-                <div className="grid grid-cols-3 ">
+                <div className="grid grid-cols-3 font-thin ">
                     <div></div>
 
                     <nav className="justify-self-center grid grid-cols-3 gap-x-10 justify-items-center">
 
                         <NavLink
                             to="/" exact
-                            activeClassName="text-gray-500 underline"
-                            className="text-white hover:text-gray-400 hover:underline"
+                            activeClassName="text-gray-500 border-b-2 border-gray-900 hover:border-gray-900"
+                            className="text-white hover:text-gray-500 border-b-2 border-white hover:border-gray-500"
+                           
                         >HOME</NavLink>
 
                         <NavLink
-                            to="/project"
-                            activeClassName="text-gray-500 underline"
-                            className="text-white hover:text-gray-400 hover:underline"
+                            to="/espial"
+                            activeClassName="text-gray-500 border-b-2 border-gray-900 hover:border-gray-900"
+                            className="text-white hover:text-gray-500 border-b-2 border-white hover:border-gray-500"
                         >ESPIAL</NavLink>
 
                         <NavLink
                             to="/projects"
-                            activeClassName="text-gray-500 underline"
-                            className="text-white hover:text-gray-400 hover:underline"
+                            activeClassName="text-gray-500 border-b-2 border-gray-900 hover:border-gray-900"
+                            className="text-white hover:text-gray-500 border-b-2 border-white hover:border-gray-500"
                         >PROJECTS</NavLink>
 
                     </nav >
 
                     {/* Social links in navbar */}
-                    <div className="justify-self-end relative">
+                    <div className="justify-self-end relative cursive">
 
                         <div className=" bg-white text-black px-1.5 rounded-l-lg  absolute right-4 ">
                             CONTACT

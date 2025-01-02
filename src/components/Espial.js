@@ -8,7 +8,7 @@ function urlFor(source) {
     return builder.image(source)
 }
 
-export default function Projects() {
+export default function Espial() {
     const [projectData, setProjectData] = useState(null)
     //const [stackData, techStackData] = useState(null)
 
@@ -43,7 +43,7 @@ export default function Projects() {
     return (
         <main className="bg-black min-h-screen ">
             <section className="container mx-auto p-20 lg:pt-36">
-                <h1 className="text-5xl text-white flex justify-center cursive mb-12">My Projects</h1>
+                <h1 className="text-5xl text-white flex justify-center cursive mb-12">Espial Page</h1>
 
                 {/* <section className="grid grid-cols-3  gap-5">
 

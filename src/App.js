@@ -7,6 +7,7 @@ import NavBar from "./components/NavBar";
 import Home from "./components/Home";
 import Projects from "./components/Projects"
 import Inquiry from "./components/Inquiry";
+import Espial from "./components/Espial";
 
 
 
@@ -22,7 +23,8 @@ function App() {
         <Route component={Post} path='/post' />
         <Route component={Project} path='/project' />
         <Route component={Home} path='/' exact />
-        <Route component={Projects} path='/projecs' />
+        <Route component={Espial} path='/espial' />
+        <Route component={Projects} path='/projects' />
         <Route component={Inquiry} path='/inquiry' />
       </Switch>
       </div>
