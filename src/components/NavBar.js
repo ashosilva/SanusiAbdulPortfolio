@@ -49,7 +49,7 @@ export default function Navbar() {
                             to="/projects"
                             activeClassName="text-gray-500 border-b-2 border-gray-900 hover:border-gray-900"
                             className="text-white hover:text-gray-500 border-b-2 border-white hover:border-gray-500"
-                        >PROJECTS</NavLink>
+                        >PORTFOLIO</NavLink>
 
                     </nav >
 

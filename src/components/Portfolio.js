@@ -8,7 +8,7 @@ function urlFor(source) {
     return builder.image(source)
 }
 
-export default function Projects() {
+export default function Portfolio() {
     const [projectData, setProjectData] = useState(null)
     //const [stackData, techStackData] = useState(null)
 
