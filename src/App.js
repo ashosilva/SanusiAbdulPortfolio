@@ -1,5 +1,6 @@
 import { BrowserRouter, Route, Switch } from "react-router-dom"
 import NavBar from "./components/NavBar";
+import ScrollToTop from "./components/ScrollToTop";
 import Home from "./components/Home";
 import Espial from "./components/Espial";
 import Portfolio from "./components/Portfolio"
@@ -13,6 +14,7 @@ function App() {
   return (
     < BrowserRouter >
       <NavBar />
+      <ScrollToTop />
       <div className="content">
       <Switch>
         <Route component={Home} path='/' exact />

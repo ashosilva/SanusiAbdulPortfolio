@@ -32,16 +32,16 @@ export default function Portfolio() {
     return (
         <main className="bg-black min-h-screen ">
             <section className="p-20">
-                <h1 className="text-xl text-white flex justify-center cursive mb-2 pt-20">Personal pieces</h1>
+                <h1 className="text-xl text-white flex justify-center cursive mb-5 pt-20">Personal pieces</h1>
 
-                <div className="grid grid-cols-5 gap-3 px-20 lg:px-40">
+                <div className="grid grid-cols-4 gap-7 flex items-center px-5 lg:px-10">
 
                     {portfolioData && portfolioData.map((portfolio, index) => (
                         <article className="shadow-xl">
                             <img
                                     src={urlFor(portfolio.portfolioImage).url()}
                                     alt={portfolio.title}
-                                    className="object-cover w-full h-48 lg:h-96"
+                                    className="object-cover w-full h-full border"
                                 />
                         </article>
 

@@ -33,29 +33,7 @@ export default function Inquiry() {
     return (
         <main className="bg-black min-h-screen">
 
-            <div className="p-10 lg:pt-36 container mx-auto">
-                <img
-                    src={urlFor(home.homeImage).url()}
-                    alt={home.name}
-                    className="rounded w-32 h-32 lg:w-64 lg:h-64 mr-8"
-                />
-                        
-                <div class="overflow-visible"></div>
-                        
-                <div className="text-lg flex flex-col justify-center">
-                    <h1 className=" bold text-5xl text-green-300 mb-4">
-                        <span className="text-green-100">{home.name}</span>
-                    </h1>
-                    <div className="prose lg:prose-xl text-white">
-                        <BlockContent
-                            blocks={home.bio}
-                            projectId="hxac9fk1"
-                            dataset="production"
-                        />
-                    </div>
-                </div>
-
-            </div>
+            {/* do it like the projects page of abayomi portfolio with the box container */}
 
         </main>
     )
