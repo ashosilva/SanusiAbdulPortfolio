@@ -2,16 +2,29 @@ import React, {useState, useEffect} from "react"
 import { NavLink } from "react-router-dom"
 import { SocialIcon } from "react-social-icons"
 import { VscChevronDown, VscChevronUp } from "react-icons/vsc";
+import sanityClient from "../client.js"
 
 
 
 
 export default function Navbar() {
     const [dropdownOpen, setDropdownOpen] = useState(false);
+    const [inquiryData, setInquiryData] = useState(null)
 
     const toggleDropdown = () => {
         setDropdownOpen(!dropdownOpen);
     };
+
+        useEffect(() => {
+            sanityClient
+                .fetch(`*[_type == "inquiry"]{
+                socialType,
+                profileLink,
+
+            }`)
+                .then((data) => setInquiryData(data))
+                .catch(console.error);
+        }, []);
 
     return (
         <header className="navbar border-sky-500 fixed top-0 left-0 right-0 py-2">
@@ -56,38 +69,39 @@ export default function Navbar() {
                     {/* Social links in navbar */}
                     <div className="justify-self-end relative cursive">
 
-                        <div className=" bg-white text-black px-1.5 rounded-l-lg  absolute right-4 ">
-                            CONTACT
+                        <div className="flex">
+                            <div className=" bg-white text-black px-1.5 rounded-l-lg ">
+                                CONTACT
+                            </div>
+                            <button>
+                                <VscChevronUp 
+                                    onClick={toggleDropdown}  
+                                    className=" ml-0.5 bg-white text-black rounded-r-lg hover:bg-gray-300"
+                                    style={{ height: 24, width: 18 }}
+                                />
+                            </button>
                         </div>
-                        <button>
-                            <VscChevronUp 
-                                onClick={toggleDropdown}  
-                                className="bg-white text-black rounded-r-lg hover:text-gray-500 focus:outline-none"
-                                style={{ height: 24, width: 15 }}
-                            />
-                        </button>
+
+                        
 
                         {dropdownOpen && (
-                            <div className="absolute right-11 -top-8 w-16 z-50">
-
-                                <div className="grid grid-cols-4">
-                                    <div></div>
+                            <div className="absolute -top-10 grid grid-rows-1 grid-flow-col gap-0.5">
+                                {inquiryData && inquiryData.map((inquiry, index) => (
                                     <SocialIcon
-                                        url="https://www.instagram.com/a8itonz/"
+                                        url={inquiry.profileLink}
+                                        network={inquiry.socialType}
                                         className="hover:opacity-75"
                                         target="_blank"
-                                        fgColor="#fff"
-                                        style={{ height: 25, width: 25 }}
+                                        fgColor="white"
+                                        bgColor=""
+                                        style={{ height: 30, width: 30 }}
                                     />
-                                    <div></div>
-                                    
-                                    <div><NavLink
+                                ))}
+                                
+                                <NavLink
                                     to="/inquiry"
-                                    className=" bg-gray-800 text-white px-1 rounded hover:bg-gray-700"
-                                    >Inquiry</NavLink></div>
-                                    
-
-                                </div>
+                                    className=" bg-gray-600 text-white my-1 px-1 rounded hover:bg-gray-700"
+                                >Inquiry</NavLink>
                                 
                             </div>
                         )}

@@ -32,14 +32,14 @@ export default function Home() {
 
     return (
         <main className="bg-black min-h-screen">
-            <div className="p-20">
+            <section className="p-20">
 
                 <div className="grid grid-cols-3 justify-items-center pt-20">
                 
                     <img
                         src={urlFor(home.homeImage).url()}
                         alt={home.name}
-                        className="w-full h-full border-double border-2 col-span-2"
+                        className="col-span-2 w-full h-full border-double border-2"
                     />
                     <div className="place-self-center">
                         <h1 className=" bold text-3xl lg:text-4xl text-green-300">
@@ -73,7 +73,7 @@ export default function Home() {
                     </div>
                 </div>
 
-            </div>
+            </section>
 
         </main>
     )
