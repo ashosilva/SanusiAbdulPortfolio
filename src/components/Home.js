@@ -43,7 +43,7 @@ export default function Home() {
                     />
                     <div className="place-self-center">
                         <h1 className=" bold text-3xl lg:text-4xl text-green-300">
-                            <span className="text-white">Feratured Style</span>
+                            <span className="text-white">Featured Style</span>
                         </h1>
                     </div>
 
