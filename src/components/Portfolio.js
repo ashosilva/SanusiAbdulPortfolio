@@ -29,12 +29,14 @@ export default function Portfolio() {
 
     }, []);
 
+    if (!portfolioData) return <main className="bg-black min-h-screen"> <div className="text-white flex justify-center  pt-40 "> Loading...</div> </main>;
+
     return (
         <main className="bg-black min-h-screen ">
             <section className="p-20">
-                <h1 className="text-xl text-white flex justify-center cursive mb-5 pt-20">Personal pieces</h1>
+                <h1 className="text-lg lg:text-2xl text-white flex justify-center cursive mb-5 pt-20">Personal pieces</h1>
 
-                <div className="grid grid-cols-4 gap-7 flex items-center px-5 lg:px-10">
+                <div className="grid grid-cols-4 gap-7 items-center px-10 lg:px-20">
 
                     {portfolioData && portfolioData.map((portfolio, index) => (
                         <article className="shadow-xl">

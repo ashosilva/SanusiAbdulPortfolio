@@ -3,6 +3,9 @@
 @import url("https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css");
 @import url('https://fonts.googleapis.com/css2?family=Acme&display=swap');
 
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 .cursive{
   font-family: "Acme", cursive;

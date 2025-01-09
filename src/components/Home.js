@@ -1,6 +1,5 @@
 import React, {useState, useEffect} from "react"
 import sanityClient from "../client.js"
-import bgAbout from "../bgAbt.png"
 import imageUrlBuilder from "@sanity/image-url";
 import BlockContent from "@sanity/block-content-to-react"
 import Navbar from "./NavBar.js";
@@ -28,7 +27,7 @@ export default function Home() {
             .catch(console.error);
     }, []);
 
-    if (!home) return <main className="bg-black min-h-screen"> <div className="text-white flex justify-center"> Loading...</div> </main>;
+    if (!home) return <main className="bg-black min-h-screen"> <div className="text-white flex justify-center  pt-40 "> Loading...</div> </main>;
 
     return (
         <main className="bg-black min-h-screen">
