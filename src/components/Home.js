@@ -1,8 +1,7 @@
 import React, {useState, useEffect} from "react"
-import sanityClient from "../client.js"
+import sanityClient from "../sanityConfig/client.js"
 import imageUrlBuilder from "@sanity/image-url";
 import BlockContent from "@sanity/block-content-to-react"
-import Navbar from "./NavBar.js";
 
 const builder = imageUrlBuilder(sanityClient);
 
@@ -20,6 +19,7 @@ export default function Home() {
             name,
             bio,
             career,
+            email,
             "homeImage": image.asset->url,
             "personalImage": pimage.asset->url
         }`)
@@ -31,7 +31,7 @@ export default function Home() {
 
     return (
         <main className="bg-black min-h-screen">
-            <section className="p-20">
+            <section className="lg:p-20 px-20 pt-40">
 
                 <div className="grid grid-cols-3 justify-items-center pt-20">
                 
@@ -49,25 +49,26 @@ export default function Home() {
                 </div>
                 <div className="p-5"></div>
 
-                <div className="max-w-md mx-auto rounded-xl shadow-md overflow-hidden md:max-w-2xl">
+                <div className=" mx-auto rounded-xl shadow-md overflow-hidden  pt-40 lg:-pt-80">
                     <div className="md:flex">
                         <div className="md:shrink-0">
                             <img 
-                                className="object-cover h-48 w-48 lg:w-64 lg:h-64 rounded-full" 
+                                className="object-cover h-48 w-48 lg:w-64 lg:h-64 rounded-full border-4 p-2 border-neutral-300" 
                                 src={urlFor(home.personalImage).url()} 
                                 alt={home.career}
                             />
                         </div>
-                        <div className="px-5 py-3">
+                        <div className="px-3 py-3">
                             <h1 className="uppercase tracking-wide text-lg text-white font-extralight">{home.name}</h1>
-                            <h3 className="block text-md leading-tight font-thin text-white ">{home.career}</h3>
-                            <p className="mt-2 text-white text-sm font-normal">
+                            <h3 className="block text-md leading-tight font-thin text-white">{home.career}</h3>
+                            <div className="mt-2 text-white text-xs lg:text- font-normal">
                                 <BlockContent
                                     blocks={home.bio}
-                                    projectId="hxac9fk1"
-                                    dataset="production"
+                                    projectId={process.env.REACT_APP_SANITY_PROJECT_ID}
+                                    dataset={process.env.REACT_APP_SANITY_DATASET}
                                 />
-                            </p>
+                            </div>
+                            <h3 className="block text-sm tracking-widest font-thin text-white">Email: {home.email}</h3>
                         </div>
                     </div>
                 </div>

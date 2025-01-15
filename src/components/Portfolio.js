@@ -1,5 +1,5 @@
-import React, { useState, useEffect, useReducer } from "react"
-import sanityClient from "../client.js"
+import React, { useState, useEffect, } from "react"
+import sanityClient from "../sanityConfig/client.js"
 import imageUrlBuilder from "@sanity/image-url";
 
 const builder = imageUrlBuilder(sanityClient);
@@ -39,11 +39,11 @@ export default function Portfolio() {
                 <div className="grid grid-cols-4 gap-7 items-center px-10 lg:px-20">
 
                     {portfolioData && portfolioData.map((portfolio, index) => (
-                        <article className="shadow-xl">
+                        <article key={portfolioData.id || index} className="shadow-xl">
                             <img
                                     src={urlFor(portfolio.portfolioImage).url()}
                                     alt={portfolio.title}
-                                    className="object-cover w-full h-full border"
+                                    className="object-cover w-full h-full border-4 border-neutral-400 p-2"
                                 />
                         </article>
 

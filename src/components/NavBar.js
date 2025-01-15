@@ -1,8 +1,8 @@
 import React, {useState, useEffect} from "react"
 import { NavLink } from "react-router-dom"
 import { SocialIcon } from "react-social-icons"
-import { VscChevronDown, VscChevronUp } from "react-icons/vsc";
-import sanityClient from "../client.js"
+import { VscChevronUp } from "react-icons/vsc";
+import sanityClient from "../sanityConfig/client.js"
 
 
 
@@ -85,7 +85,7 @@ export default function Navbar() {
                         
 
                         {dropdownOpen && (
-                            <div className="absolute -top-10 grid grid-rows-1 grid-flow-col gap-0.5">
+                            <div className="absolute -top-10 grid grid-rows-1 grid-flow-col gap-1.5">
                                 {inquiryData && inquiryData.map((inquiry, index) => (
                                     <SocialIcon
                                         url={inquiry.profileLink}
@@ -100,7 +100,7 @@ export default function Navbar() {
                                 
                                 <NavLink
                                     to="/inquiry"
-                                    className=" bg-gray-600 text-white my-1 px-1 rounded hover:bg-gray-700"
+                                    className=" bg-blue-500 text-white my-0.5 px-1.5 py-0.5 rounded hover:bg-blue-700"
                                 >Inquiry</NavLink>
                                 
                             </div>

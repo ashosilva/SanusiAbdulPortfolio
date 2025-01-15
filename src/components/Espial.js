@@ -1,5 +1,5 @@
-import React, { useState, useEffect, useReducer } from "react"
-import sanityClient from "../client.js"
+import React, { useState, useEffect, } from "react"
+import sanityClient from "../sanityConfig/client.js"
 import imageUrlBuilder from "@sanity/image-url";
 
 const builder = imageUrlBuilder(sanityClient);
@@ -39,7 +39,7 @@ export default function Espial() {
                 <div className="grid grid-cols-5 gap-3 px-10 lg:px-20">
 
                     {espialData && espialData.map((espial, index) => (
-                        <article className="shadow-xl">
+                        <article key={espial.id || index} className="shadow-xl">
                             <img
                                     src={urlFor(espial.espialImage).url()}
                                     alt={espial.title}
