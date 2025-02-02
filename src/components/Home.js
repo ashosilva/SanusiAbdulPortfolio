@@ -49,7 +49,7 @@ export default function Home() {
                 </div>
                 <div className="p-5"></div>
 
-                <div className=" mx-auto rounded-xl shadow-md overflow-hidden  pt-40 lg:-pt-80">
+                <div className=" mx-auto rounded-xl shadow-md overflow-hidden pt-40 lg:-pt-80 ">
                     <div className="md:flex">
                         <div className="md:shrink-0">
                             <img 
@@ -59,16 +59,17 @@ export default function Home() {
                             />
                         </div>
                         <div className="px-3 py-3">
-                            <h1 className="uppercase tracking-wide text-lg text-white font-extralight">{home.name}</h1>
-                            <h3 className="block text-md leading-tight font-thin text-white">{home.career}</h3>
-                            <div className="mt-2 text-white text-xs lg:text- font-normal">
+                            <h1 className="uppercase tracking-wide text-lg text-white font-extralight ">{home.name}</h1>
+                            <h3 className="block text-md leading-tight font-thin text-white mb-1">{home.career}</h3>
+                            <h3 className="block text-sm tracking-widest font-thin text-white "> -- Email: {home.email} --</h3>
+                            <div className="my-1 text-white text-md lg:text-md font-normal">
                                 <BlockContent
                                     blocks={home.bio}
                                     projectId={process.env.REACT_APP_SANITY_PROJECT_ID}
                                     dataset={process.env.REACT_APP_SANITY_DATASET}
                                 />
                             </div>
-                            <h3 className="block text-sm tracking-widest font-thin text-white">Email: {home.email}</h3>
+                            
                         </div>
                     </div>
                 </div>

@@ -69,7 +69,7 @@ export default function Inquiry() {
        <main className="bg-black min-h-screen">
 
             <section className="p-20 px-40 lg:px-80">
-                <h1 className="text-lg lg:text-2xl text-white flex justify-center cursive pt-20">Inquiry</h1>
+                <h1 className="text-lg lg:text-2xl text-white flex justify-center pagetitle pt-20">Inquiry</h1>
                 <p className="text-xs lg:text-base font-thin text-white flex justify-center mb-1 tracking-widest">Please enter your Name, Email and/or any Comment for styling inquiries.</p>
                 <div className="bg-neutral-900 rounded-lg shadow-2xl p-20 lg:px-40">
                     <div className="max-w-sm space-y-5">

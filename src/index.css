@@ -1,17 +1,29 @@
 
 @import url("https://unpkg.com/@tailwindcss/typography@0.2.x/dist/typography.min.css");
 @import url("https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css");
-@import url('https://fonts.googleapis.com/css2?family=Acme&display=swap');
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-.cursive{
-  font-family: "Acme", cursive;
+.navtitle{
+  font-family: 'Times New Roman', Times, serif;
+  text-shadow: 3px 3px 3px #8d8c8c;
   font-weight: 700;
 }
 
+.pagetitle{
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: 700;
+}
+
+.tabfont{
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.textfont{
+  font-family: 'Times New Roman', Times, serif;
+}
 
 .prose img {
   margin-left: auto;

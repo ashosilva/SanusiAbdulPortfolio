@@ -33,7 +33,7 @@ export default function Navbar() {
                 <div className="flex justify-center">
                     <NavLink
                         to="/"
-                        className="text-white hover:text-gray-300 text-8xl cursive tracking-widest"
+                        className="text-white hover:text-gray-300 text-8xl navtitle tracking-widest"
                     >RadiiSolis</NavLink>
 
                 </div>
@@ -43,31 +43,31 @@ export default function Navbar() {
                 <div className="grid grid-cols-3 font-thin ">
                     <div></div>
 
-                    <nav className="justify-self-center grid grid-cols-3 gap-x-10 justify-items-center">
+                    <nav className="justify-self-center grid grid-cols-3 gap-x-10 justify-items-center tabfont">
 
                         <NavLink
                             to="/" exact
-                            activeClassName="text-zinc-500 border-b-0 border-neutral-900 hover:border-neutral-900"
+                            activeClassName="text-zinc-500 border-b-0 border-zinc-900 hover:border-zinc-900"
                             className="text-white hover:text-gray-500 border-b-2 border-white hover:border-gray-500"
                            
                         >HOME</NavLink>
 
                         <NavLink
                             to="/espial"
-                            activeClassName="text-zinc-500 border-b-0 border-neutral-900 hover:border-neutral-900"
+                            activeClassName="text-zinc-500 border-b-0 border-zinc-900 hover:border-zinc-900"
                             className="text-white hover:text-gray-500 border-b-2 border-white hover:border-gray-500"
                         >ESPIAL</NavLink>
 
                         <NavLink
                             to="/projects"
-                            activeClassName="text-zinc-500 border-b-0 border-neutral-900 hover:border-neutral-900"
+                            activeClassName="text-zinc-500 border-b-0 border-zinc-900 hover:border-zinc-900"
                             className="text-white hover:text-gray-500 border-b-2 border-white hover:border-gray-500"
                         >PORTFOLIO</NavLink>
 
                     </nav >
 
                     {/* Social links in navbar */}
-                    <div className="justify-self-end relative cursive">
+                    <div className="justify-self-end relative navtitle">
 
                         <div className="flex">
                             <div className=" bg-white text-black px-1.5 rounded-l-lg ">

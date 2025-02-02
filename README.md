@@ -68,3 +68,16 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+
+
+
+### the sol note
+cd studio-> npm run dev
+cd src-> npm run start
+root-> npx tailwindcss -i ./src/index.css -o ./src/outdex.css --watch
+root-> sudo npm install PACKAGE_NAME --legacy-peer-deps
+root-> git add . | git commit -m "message" | git push
+
+rm -rf node_modules
+rm -rf package-lock.json

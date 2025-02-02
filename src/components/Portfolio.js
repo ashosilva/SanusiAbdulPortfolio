@@ -34,7 +34,7 @@ export default function Portfolio() {
     return (
         <main className="bg-black min-h-screen ">
             <section className="p-20">
-                <h1 className="text-lg lg:text-2xl text-white flex justify-center cursive mb-5 pt-20">Personal pieces</h1>
+                <h1 className="text-lg lg:text-2xl text-white flex justify-center pagetitle mb-5 pt-20">Personal pieces</h1>
 
                 <div className="grid grid-cols-4 gap-7 items-center px-10 lg:px-20">
 
