@@ -62,7 +62,7 @@ export default function Home() {
                             <h1 className="uppercase tracking-wide text-lg text-white font-extralight ">{home.name}</h1>
                             <h3 className="block text-md leading-tight font-thin text-white mb-1">{home.career}</h3>
                             <h3 className="block text-sm tracking-widest font-thin text-white "> -- Email: {home.email} --</h3>
-                            <div className="my-1 text-white text-md lg:text-md font-normal">
+                            <div className="my-1 text-white text-md lg:text-lg font-normal textfont">
                                 <BlockContent
                                     blocks={home.bio}
                                     projectId={process.env.REACT_APP_SANITY_PROJECT_ID}
