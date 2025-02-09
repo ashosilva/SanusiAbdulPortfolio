@@ -43,7 +43,7 @@ export default function Navbar() {
                 <div className="grid grid-cols-3 font-thin ">
                     <div></div>
 
-                    <nav className="justify-self-center grid grid-cols-3 gap-x-10 justify-items-center tabfont">
+                    <nav className="justify-self-center grid grid-cols-2 gap-x-20 justify-items-center tabfont">
 
                         <NavLink
                             to="/" exact
@@ -52,11 +52,11 @@ export default function Navbar() {
                            
                         >HOME</NavLink>
 
-                        <NavLink
+                        {/* <NavLink
                             to="/espial"
                             activeClassName="text-zinc-500 border-b-0 border-zinc-900 hover:border-zinc-900"
                             className="text-white hover:text-gray-500 border-b-2 border-white hover:border-gray-500"
-                        >ESPIAL</NavLink>
+                        >ESPIAL</NavLink> */}
 
                         <NavLink
                             to="/projects"
