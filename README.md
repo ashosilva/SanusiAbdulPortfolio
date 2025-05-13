@@ -77,6 +77,7 @@ cd studio-> npm run dev
 cd src-> npm run start
 root-> npx tailwindcss -i ./src/index.css -o ./src/outdex.css --watch
 root-> sudo npm install PACKAGE_NAME --legacy-peer-deps
+npx @tailwindcss/cli -i ./src/index.css -o ./src/outdex.css --minify (when i wnat to deploy)
 root-> git add . | git commit -m "message" | git push
 
 rm -rf node_modules
