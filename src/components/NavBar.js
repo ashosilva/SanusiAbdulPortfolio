@@ -47,20 +47,20 @@ export default function Navbar() {
 
                         <NavLink
                             to="/" exact
-                            activeClassName="text-zinc-500 border-b-0 border-zinc-900 hover:border-zinc-900"
+                            activeClassName="text-gray-500 border-b-0 border-gray-900 hover:border-gray-900"
                             className="text-white hover:text-gray-500 border-b-2 border-white hover:border-gray-500"
                            
                         >HOME</NavLink>
 
                         {/* <NavLink
                             to="/espial"
-                            activeClassName="text-zinc-500 border-b-0 border-zinc-900 hover:border-zinc-900"
+                            activeClassName="text-gray-500 border-b-0 border-gray-900 hover:border-gray-900"
                             className="text-white hover:text-gray-500 border-b-2 border-white hover:border-gray-500"
                         >ESPIAL</NavLink> */}
 
                         <NavLink
                             to="/projects"
-                            activeClassName="text-zinc-500 border-b-0 border-zinc-900 hover:border-zinc-900"
+                            activeClassName="text-gray-500 border-b-0 border-gray-900 hover:border-gray-900"
                             className="text-white hover:text-gray-500 border-b-2 border-white hover:border-gray-500"
                         >PORTFOLIO</NavLink>
 

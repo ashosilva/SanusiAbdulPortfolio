@@ -110,7 +110,7 @@ export default function Inquiry() {
                         {/* <!-- Toolbar --> */}
                         <div  className="flex w-full justify-end py-5">
                             <button
-                                className="select-none rounded-full bg-white py-1 lg:py-2 px-2 lg:px-4 text-center align-middle font-sans text-xs font-bold uppercase text-black hover:shadow-2xl hover:shadow-gray-200/50"
+                                className="select-none rounded-full bg-white py-1 lg:py-2 px-2 lg:px-4 text-center align-middle font-sans text-xs font-bold uppercase text-black hover:shadow-2xl hover:shadow-gray-200/50 hover:bg-gray-300"
                                 type="button"
                                 onClick={sendEmail}>
                                 Connect
