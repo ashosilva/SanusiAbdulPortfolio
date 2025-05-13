@@ -75,7 +75,7 @@ export default function Inquiry() {
                     <div className="max-w-sm space-y-5">
                             <input 
                                 type="text"
-                                className="peer lg:py-4 py-2 px-4 block lg:w-full w-48 rounded-lg border-2 border-neutral-700 bg-neutral-800 text-sm text-neutral-200 disabled:opacity-50 disabled:pointer-events-none placeholder-neutral-500 shadow-2xl shadow-neutral-800" 
+                                className="peer lg:py-4 py-2 px-4 block lg:w-full w-48 rounded-lg border-2 border-neutral-700 bg-neutral-800 text-sm text-gray-200 disabled:opacity-50 disabled:pointer-events-none placeholder-neutral-500 shadow-2xl shadow-neutral-800" 
                                 placeholder="Name"
                                 value={inquiryName}
                                 onChange={(e) => setInquiryName(e.target.value)}
@@ -89,7 +89,7 @@ export default function Inquiry() {
                             </input> */}
                             <input 
                                 type="email"
-                                className="peer lg:py-4 py-2 px-4 block lg:w-full w-48 rounded-lg border-2 border-neutral-700 bg-neutral-800 text-sm text-neutral-200 disabled:opacity-50 disabled:pointer-events-none placeholder-neutral-500 shadow-2xl shadow-neutral-800" 
+                                className="peer lg:py-4 py-2 px-4 block lg:w-full w-48 rounded-lg border-2 border-neutral-700 bg-neutral-800 text-sm text-gray-200 disabled:opacity-50 disabled:pointer-events-none placeholder-neutral-500 shadow-2xl shadow-neutral-800" 
                                 placeholder="Email"
                                 value={inquiryEmail}
                                 onChange={(e) => setInquiryEmail(e.target.value)}
@@ -100,7 +100,7 @@ export default function Inquiry() {
                     {/* <!-- Textarea --> */}
                     <div className="relative pt-8">
                         <textarea 
-                            className="p-4 pb-12 block w-full rounded-lg border-2 border-neutral-700 bg-neutral-800 text-sm text-neutral-200 placeholder-neutral-500 "
+                            className="p-4 pb-12 block w-full rounded-lg border-2 border-neutral-700 bg-neutral-800 text-sm text-gray-200 placeholder-neutral-500 "
                             placeholder="Comment here"
                             value={inquiryComment}
                             onChange={(e) => setInquiryComment(e.target.value)}
@@ -110,7 +110,7 @@ export default function Inquiry() {
                         {/* <!-- Toolbar --> */}
                         <div  className="flex w-full justify-end py-5">
                             <button
-                                className="select-none rounded-full bg-white py-1 lg:py-2 px-2 lg:px-4 text-center align-middle font-sans text-xs font-bold uppercase text-black hover:shadow-2xl hover:shadow-gray-200/50 hover:bg-gray-300"
+                                className="select-none rounded-full bg-white py-1 lg:py-2 px-2 lg:px-4 text-center align-middle font-sans text-xs font-bold uppercase text-black hover:shadow-2xl hover:shadow-gray-200/50 hover:bg-gray-200"
                                 type="button"
                                 onClick={sendEmail}>
                                 Connect

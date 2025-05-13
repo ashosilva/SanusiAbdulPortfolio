@@ -88,7 +88,7 @@ export default function Portfolio() {
                             <img
                                 src={urlFor(portfolioData[selectedImage].portfolioImage).url()}
                                 alt="Enlarged view"
-                                className={`w-full h-auto rounded-lg shadow-lg border-2 border-neutral-500 transition-transform duration-300 ${isZoomed ? 'scale-150 cursor-zoom-out' : 'scale-100 cursor-zoom-in'}`}
+                                className={`w-full h-auto rounded-lg shadow-lg border-2 border-neutral-500 transition-transform duration-300 ${isZoomed ? 'scale-100 cursor-zoom-out' : 'scale-80 cursor-zoom-in'}`}
                                 onClick={(e) => {
                                     e.stopPropagation();
                                     setIsZoomed((prev) => !prev);;

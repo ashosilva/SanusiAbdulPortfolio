@@ -1,8 +1,10 @@
 import React, {useState, useEffect} from "react"
-import { NavLink } from "react-router-dom"
+import { NavLink, useLocation } from "react-router-dom"
 import { SocialIcon } from "react-social-icons"
 import { VscChevronUp } from "react-icons/vsc";
 import sanityClient from "../sanityConfig/client.js"
+import clsx from "clsx";
+
 
 
 
@@ -14,6 +16,10 @@ export default function Navbar() {
     const toggleDropdown = () => {
         setDropdownOpen(!dropdownOpen);
     };
+    const location = useLocation();
+    const isActiveProjects = location.pathname === "/projects";
+    const isActiveHome = location.pathname === "/";
+
 
         useEffect(() => {
             sanityClient
@@ -47,21 +53,27 @@ export default function Navbar() {
 
                         <NavLink
                             to="/" exact
-                            activeClassName="text-gray-500 border-b-0 border-gray-900 hover:border-gray-900"
-                            className="text-white hover:text-gray-500 border-b-2 border-white hover:border-gray-500"
+                            className={clsx(
+                                isActiveHome
+                                  ? "text-neutral-500 border-b-0"
+                                  : "text-white border-b-2 hover:text-neutral-500 hover:border-b-0 transition-border duration-100")
+                              }
                            
                         >HOME</NavLink>
 
                         {/* <NavLink
                             to="/espial"
                             activeClassName="text-gray-500 border-b-0 border-gray-900 hover:border-gray-900"
-                            className="text-white hover:text-gray-500 border-b-2 border-white hover:border-gray-500"
+                            className="text-white hover:text-gray-500 border-b-2 border-white hover:border-gray-500 transition-colors duration-300"
                         >ESPIAL</NavLink> */}
 
                         <NavLink
                             to="/projects"
-                            activeClassName="text-gray-500 border-b-0 border-gray-900 hover:border-gray-900"
-                            className="text-white hover:text-gray-500 border-b-2 border-white hover:border-gray-500"
+                            className={clsx(
+                                isActiveProjects
+                                  ? "text-neutral-500 border-b-0"
+                                  : "text-white border-b-2 hover:text-neutral-500 hover:border-b-0 transition-border duration-100")
+                              }
                         >PORTFOLIO</NavLink>
 
                     </nav >

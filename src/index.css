@@ -1,10 +1,5 @@
 
-@import url("https://unpkg.com/@tailwindcss/typography@0.2.x/dist/typography.min.css");
-@import url("https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css");
-
-
-
-@tailwind utilities;
+@import "tailwindcss";
 
 .navtitle{
   font-family: 'Times New Roman', Times, serif;
@@ -49,4 +44,3 @@
 .content {
   padding-top: 100px;
 }
-
